@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="devices">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="device_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="device_url_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="device_retired" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="transactions" Relationship="Self.FK_transactions_devices" FromRole="devices" ToRole="transactions" />
+  </EntityType>
+  <EntityType Name="logs">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="latitude" Type="Decimal" Precision="18" Scale="9" Nullable="false" />
+    <Property Name="longitude" Type="Decimal" Precision="18" Scale="9" Nullable="false" />
+    <Property Name="annotation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="satellites" Type="Int32" Nullable="false" />
+    <Property Name="altitude" Type="Decimal" Precision="18" Scale="9" Nullable="false" />
+    <Property Name="speed" Type="Decimal" Precision="18" Scale="9" Nullable="false" />
+    <Property Name="accuracy" Type="Decimal" Precision="18" Scale="9" Nullable="false" />
+    <Property Name="direction" Type="Decimal" Precision="18" Scale="9" Nullable="false" />
+    <Property Name="provider" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="time_utc" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="battery" Type="Decimal" Precision="18" Scale="9" Nullable="false" />
+    <Property Name="androidid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="serial" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="url" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="transactions" Relationship="Self.FK_transactions_logs" FromRole="logs" ToRole="transactions" />
+  </EntityType>
+  <EntityType Name="owners">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="owner" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="transactions" Relationship="Self.FK_transactions_owners" FromRole="owners" ToRole="transactions" />
+  </EntityType>
+  <EntityType Name="transactions">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="devices_id" Type="Int32" Nullable="false" />
+    <Property Name="logs_id" Type="Int32" Nullable="false" />
+    <Property Name="owners_id" Type="Int32" Nullable="false" />
+    <Property Name="date_time" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="devices" Relationship="Self.FK_transactions_devices" FromRole="transactions" ToRole="devices" />
+    <NavigationProperty Name="logs" Relationship="Self.FK_transactions_logs" FromRole="transactions" ToRole="logs" />
+    <NavigationProperty Name="owners" Relationship="Self.FK_transactions_owners" FromRole="transactions" ToRole="owners" />
+  </EntityType>
+  <Association Name="FK_transactions_devices">
+    <End Role="devices" Type="Self.devices" Multiplicity="1" />
+    <End Role="transactions" Type="Self.transactions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="devices">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="transactions">
+        <PropertyRef Name="devices_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_transactions_logs">
+    <End Role="logs" Type="Self.logs" Multiplicity="1" />
+    <End Role="transactions" Type="Self.transactions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="logs">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="transactions">
+        <PropertyRef Name="logs_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_transactions_owners">
+    <End Role="owners" Type="Self.owners" Multiplicity="1" />
+    <End Role="transactions" Type="Self.transactions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="owners">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="transactions">
+        <PropertyRef Name="owners_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EDM" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="devices" EntityType="Self.devices" />
+    <EntitySet Name="logs" EntityType="Self.logs" />
+    <EntitySet Name="owners" EntityType="Self.owners" />
+    <EntitySet Name="transactions" EntityType="Self.transactions" />
+    <AssociationSet Name="FK_transactions_devices" Association="Self.FK_transactions_devices">
+      <End Role="devices" EntitySet="devices" />
+      <End Role="transactions" EntitySet="transactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_transactions_logs" Association="Self.FK_transactions_logs">
+      <End Role="logs" EntitySet="logs" />
+      <End Role="transactions" EntitySet="transactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_transactions_owners" Association="Self.FK_transactions_owners">
+      <End Role="owners" EntitySet="owners" />
+      <End Role="transactions" EntitySet="transactions" />
+    </AssociationSet>
+    <FunctionImport Name="GetLastOfEach" ReturnType="Collection(Model.GetLastOfEach_Result)" />
+  </EntityContainer>
+  <ComplexType Name="GetLastOfEach_Result">
+    <Property Type="String" Name="device_name" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="date_time" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="latitude" Nullable="true" Precision="18" Scale="9" />
+    <Property Type="Decimal" Name="longitude" Nullable="true" Precision="18" Scale="9" />
+    <Property Type="Decimal" Name="battery" Nullable="true" Precision="18" Scale="9" />
+    <Property Type="String" Name="provider" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="maps_url" Nullable="true" />
+    <Property Type="Int32" Name="device_id" Nullable="true" />
+  </ComplexType>
+</Schema>

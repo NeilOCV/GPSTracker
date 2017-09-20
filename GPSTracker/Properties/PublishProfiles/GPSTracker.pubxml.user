@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Publish\GPSTracker</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/AjaxControlToolkit.dll">
+      <publishTime>04/04/2017 14:44:44</publishTime>
+    </File>
+    <File Include="bin/DAL.dll">
+      <publishTime>04/08/2017 21:34:38</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>04/04/2017 14:44:44</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>04/04/2017 14:44:45</publishTime>
+    </File>
+    <File Include="bin/GPSTracker.dll">
+      <publishTime>04/08/2017 21:34:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css">
+      <publishTime>04/04/2017 14:44:45</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css.map">
+      <publishTime>04/04/2017 14:44:45</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css">
+      <publishTime>04/04/2017 14:44:45</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css.map">
+      <publishTime>04/04/2017 14:44:45</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>04/04/2017 14:44:45</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css.map">
+      <publishTime>04/04/2017 14:44:45</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>04/04/2017 14:44:45</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css.map">
+      <publishTime>04/04/2017 14:44:45</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>04/04/2017 14:44:45</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>04/04/2017 14:44:45</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>04/04/2017 14:44:45</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>04/04/2017 14:44:45</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>04/04/2017 14:44:45</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>04/04/2017 14:44:45</publishTime>
+    </File>
+    <File Include="Images/GPS.png">
+      <publishTime>04/04/2017 14:44:45</publishTime>
+    </File>
+    <File Include="Log.aspx">
+      <publishTime>04/04/2017 14:44:45</publishTime>
+    </File>
+    <File Include="LogIn.aspx">
+      <publishTime>04/04/2017 14:44:45</publishTime>
+    </File>
+    <File Include="LogOut.aspx">
+      <publishTime>04/04/2017 14:44:45</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>04/04/2017 14:44:45</publishTime>
+    </File>
+    <File Include="Pages/DeviceMaintenace.aspx">
+      <publishTime>04/04/2017 14:44:45</publishTime>
+    </File>
+    <File Include="Pages/DeviceStats.aspx">
+      <publishTime>04/04/2017 14:44:45</publishTime>
+    </File>
+    <File Include="Pages/History.aspx">
+      <publishTime>04/04/2017 14:44:45</publishTime>
+    </File>
+    <File Include="Pages/UserMaintenance.aspx">
+      <publishTime>04/04/2017 14:44:45</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>04/08/2017 21:35:05</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>04/04/2017 14:44:45</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>04/04/2017 14:44:45</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.9.1.js">
+      <publishTime>04/04/2017 14:44:45</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.9.1.min.js">
+      <publishTime>04/04/2017 14:44:45</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.9.1.min.map">
+      <publishTime>04/04/2017 14:44:45</publishTime>
+    </File>
+    <File Include="Styling/Styles.css">
+      <publishTime>04/04/2017 14:44:45</publishTime>
+    </File>
+    <File Include="Top.Master">
+      <publishTime>04/04/2017 14:44:45</publishTime>
+    </File>
+    <File Include="UserControls/BatteryGauge.ascx">
+      <publishTime>04/04/2017 14:44:45</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/04/2017 14:44:45</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

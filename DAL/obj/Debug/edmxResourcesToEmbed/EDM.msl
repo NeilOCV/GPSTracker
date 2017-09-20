@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="EDM">
+    <EntitySetMapping Name="devices">
+      <EntityTypeMapping TypeName="Model.devices">
+        <MappingFragment StoreEntitySet="devices">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="device_name" ColumnName="device_name" />
+          <ScalarProperty Name="device_url_name" ColumnName="device_url_name" />
+          <ScalarProperty Name="device_retired" ColumnName="device_retired" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="logs">
+      <EntityTypeMapping TypeName="Model.logs">
+        <MappingFragment StoreEntitySet="logs">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="latitude" ColumnName="latitude" />
+          <ScalarProperty Name="longitude" ColumnName="longitude" />
+          <ScalarProperty Name="annotation" ColumnName="annotation" />
+          <ScalarProperty Name="satellites" ColumnName="satellites" />
+          <ScalarProperty Name="altitude" ColumnName="altitude" />
+          <ScalarProperty Name="speed" ColumnName="speed" />
+          <ScalarProperty Name="accuracy" ColumnName="accuracy" />
+          <ScalarProperty Name="direction" ColumnName="direction" />
+          <ScalarProperty Name="provider" ColumnName="provider" />
+          <ScalarProperty Name="time_utc" ColumnName="time_utc" />
+          <ScalarProperty Name="battery" ColumnName="battery" />
+          <ScalarProperty Name="androidid" ColumnName="androidid" />
+          <ScalarProperty Name="serial" ColumnName="serial" />
+          <ScalarProperty Name="url" ColumnName="url" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="owners">
+      <EntityTypeMapping TypeName="Model.owners">
+        <MappingFragment StoreEntitySet="owners">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="owner" ColumnName="owner" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="transactions">
+      <EntityTypeMapping TypeName="Model.transactions">
+        <MappingFragment StoreEntitySet="transactions">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="devices_id" ColumnName="devices_id" />
+          <ScalarProperty Name="logs_id" ColumnName="logs_id" />
+          <ScalarProperty Name="owners_id" ColumnName="owners_id" />
+          <ScalarProperty Name="date_time" ColumnName="date_time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetLastOfEach" FunctionName="Model.Store.GetLastOfEach">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.GetLastOfEach_Result">
+          <ScalarProperty Name="device_name" ColumnName="device_name" />
+          <ScalarProperty Name="date_time" ColumnName="date_time" />
+          <ScalarProperty Name="latitude" ColumnName="latitude" />
+          <ScalarProperty Name="longitude" ColumnName="longitude" />
+          <ScalarProperty Name="battery" ColumnName="battery" />
+          <ScalarProperty Name="provider" ColumnName="provider" />
+          <ScalarProperty Name="maps_url" ColumnName="maps_url" />
+          <ScalarProperty Name="device_id" ColumnName="device_id" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

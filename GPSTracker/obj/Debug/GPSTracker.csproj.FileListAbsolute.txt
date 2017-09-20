@@ -1,0 +1,13 @@
+C:\inetpub\wwwroot\GPSTracker\GPSTracker\bin\GPSTracker.dll.config
+C:\inetpub\wwwroot\GPSTracker\GPSTracker\bin\GPSTracker.dll
+C:\inetpub\wwwroot\GPSTracker\GPSTracker\bin\GPSTracker.pdb
+C:\inetpub\wwwroot\GPSTracker\GPSTracker\obj\Debug\GPSTracker.csprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\GPSTracker\GPSTracker\obj\Debug\GPSTracker.dll
+C:\inetpub\wwwroot\GPSTracker\GPSTracker\obj\Debug\GPSTracker.pdb
+C:\inetpub\wwwroot\GPSTracker\GPSTracker\bin\AjaxControlToolkit.dll
+C:\inetpub\wwwroot\GPSTracker\GPSTracker\bin\DAL.dll
+C:\inetpub\wwwroot\GPSTracker\GPSTracker\bin\EntityFramework.dll
+C:\inetpub\wwwroot\GPSTracker\GPSTracker\bin\EntityFramework.SqlServer.dll
+C:\inetpub\wwwroot\GPSTracker\GPSTracker\bin\DAL.pdb
+C:\inetpub\wwwroot\GPSTracker\GPSTracker\bin\EntityFramework.xml
+C:\inetpub\wwwroot\GPSTracker\GPSTracker\bin\EntityFramework.SqlServer.xml

@@ -1,0 +1,10 @@
+C:\inetpub\wwwroot\GPSTracker\DAL\bin\Debug\DAL.dll.config
+C:\inetpub\wwwroot\GPSTracker\DAL\bin\Debug\DAL.dll
+C:\inetpub\wwwroot\GPSTracker\DAL\bin\Debug\DAL.pdb
+C:\inetpub\wwwroot\GPSTracker\DAL\bin\Debug\EntityFramework.dll
+C:\inetpub\wwwroot\GPSTracker\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\inetpub\wwwroot\GPSTracker\DAL\bin\Debug\EntityFramework.xml
+C:\inetpub\wwwroot\GPSTracker\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\inetpub\wwwroot\GPSTracker\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\GPSTracker\DAL\obj\Debug\DAL.dll
+C:\inetpub\wwwroot\GPSTracker\DAL\obj\Debug\DAL.pdb

@@ -1,0 +1,51 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Top.master.cs" Inherits="GPSTracker.Top" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Location Tracker</title>
+    <link runat="server" rel="shortcut icon" href="Images/GPS.png" type="Image/x-icon" />
+    <link runat="server" rel="icon" href="~/Images/GPS.png" type="image/ico" />
+    <script src="Scripts/jquery-1.9.1.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Styling/Styles.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header" style="border-radius:0px;">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#">GPS Tracker</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="~/Default.aspx" runat="server"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+        <li><a href="~/Pages/DeviceMaintenace.aspx" runat="server"><span class="glyphicon glyphicon-phone"></span> Device maintenance</a></li>
+        <li><a href="~/Pages/UserMaintenance.aspx" runat="server"><span class="glyphicon glyphicon-user"></span> User maintenance</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a style="margin-right:10px;" href="~/LogOut.aspx" runat="server" ><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
